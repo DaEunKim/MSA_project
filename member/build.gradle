@@ -1,0 +1,73 @@
+buildscript {
+    ext {
+        springBootVersion = '2.7.2'
+    }
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE")
+        classpath("com.epages:restdocs-api-spec-gradle-plugin:0.10.0")
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'com.epages.restdocs-api-spec'
+
+    group = 'org.dani'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '11'
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+        implementation 'org.springframework.boot:spring-boot-starter-hateoas'
+
+        implementation 'io.springfox:springfox-swagger2:2.6.1'
+        implementation 'io.springfox:springfox-swagger-ui:2.6.1'
+        runtimeOnly 'com.h2database:h2'
+        runtimeOnly 'mysql:mysql-connector-java'
+        annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+        //Security
+        implementation 'org.springframework.boot:spring-boot-starter-security'
+        testImplementation 'org.springframework.security:spring-security-test'
+
+        // Test And RestDocs
+        testImplementation 'com.epages:restdocs-api-spec-mockmvc:0.9.9'
+        testImplementation 'pl.pragmatists:JUnitParams:1.1.1'
+        testImplementation('org.springframework.boot:spring-boot-starter-test') {
+            exclude module: 'junit'
+        }
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    }
+}
+
+project(':member-core') {
+    dependencies {
+    }
+}
+
+project(':member-api') {
+    dependencies {
+        implementation project(':member-core')
+    }
+}
+
+
+project(':member-batch') {
+    dependencies {
+        implementation project(':member-core')
+    }
+}
