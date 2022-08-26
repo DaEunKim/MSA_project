@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b6ca553-5618-49a9-9b82-b01c81127e8c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/member/member-api/src/main/java/org/member/api/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/member/member-batch/src/main/java/org/member/batch/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/member/member-core/src/main/java/org/member/core/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member/member-core/src/main/java/org/member/core/aop/TimeTraceAop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/member/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/member/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/member/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/member/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/member/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/member/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/member-core/build/classes/java/main/org/member/core/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/member/member-core/build/classes/java/main/org/member/core/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/member-core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/member/member-core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/member-core/src/main/java/org/member/core/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/member/member-core/src/main/java/org/member/core/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +90,7 @@
       <recent name="$PROJECT_DIR$/member/member-core" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Main (1)">
+  <component name="RunManager" selected="Application.org.member.core.Main">
     <configuration name="org.member.batch.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.member.batch.Main" />
       <module name="member.member-batch.main" />
@@ -173,7 +182,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661477188362</updated>
-      <workItem from="1661477189896" duration="4547000" />
+      <workItem from="1661477189896" duration="4911000" />
     </task>
     <servers />
   </component>
