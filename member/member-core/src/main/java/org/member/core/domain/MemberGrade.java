@@ -1,33 +1,26 @@
 /**
  * packageName    : org.member.core.domain
- * fileName       : Member
+ * fileName       : Grade
  * author         : dani
  * date           : 2022/08/28
  * description    :
  */
 package org.member.core.domain;
 
-import lombok.Data;
+import org.member.core.common.enums.TypeEnum;
 
 import javax.persistence.*;
-import java.sql.Blob;
 
-@Data
 @Entity
-public class Member {
+public class MemberGrade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long index;
 
-    private String userId;
+    private String gradeName;
 
-    @Lob
-    private Blob password;
+    @Enumerated(EnumType.STRING)
+    private TypeEnum.isUse isUse;
 
-    private String name;
-
-    private String email;
-
-    private String phoneNum;
-
+    private Integer displayOrder;
 }
