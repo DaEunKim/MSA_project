@@ -32,18 +32,20 @@ subprojects {
         implementation 'org.springframework.boot:spring-boot-starter-web'
         implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
         implementation 'org.springframework.boot:spring-boot-starter-hateoas'
-
+        implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+        implementation 'org.springframework.boot:spring-boot-starter-tomcat'
+        implementation 'org.springframework.boot:spring-boot-starter-aop'
+        implementation 'org.projectlombok:lombok'
         implementation 'io.springfox:springfox-swagger2:2.6.1'
         implementation 'io.springfox:springfox-swagger-ui:2.6.1'
         runtimeOnly 'com.h2database:h2'
         runtimeOnly 'mysql:mysql-connector-java'
         annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
-
-        //Security
-        implementation 'org.springframework.boot:spring-boot-starter-security'
-        testImplementation 'org.springframework.security:spring-security-test'
+        annotationProcessor 'org.projectlombok:lombok'
 
         // Test And RestDocs
+        testImplementation 'org.projectlombok:lombok'
+        testAnnotationProcessor 'org.projectlombok:lombok'
         testImplementation 'com.epages:restdocs-api-spec-mockmvc:0.9.9'
         testImplementation 'pl.pragmatists:JUnitParams:1.1.1'
         testImplementation('org.springframework.boot:spring-boot-starter-test') {
@@ -61,6 +63,10 @@ project(':member-core') {
 
 project(':member-api') {
     dependencies {
+        //Security
+        implementation 'org.springframework.boot:spring-boot-starter-security'
+        testImplementation 'org.springframework.security:spring-security-test'
+
         implementation project(':member-core')
     }
 }
@@ -68,6 +74,7 @@ project(':member-api') {
 
 project(':member-batch') {
     dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-batch'
         implementation project(':member-core')
     }
 }
